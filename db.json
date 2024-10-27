@@ -1,0 +1,21 @@
+{
+  "users": [
+    {
+      "id": "001",
+      "name": "Timon Kipchirchir Kosgei",
+      "email": "timonkosgei15209@gmail.com",
+      "savingsbalance": 22902,
+      "loanbalance": -9780,
+      "contributions": 5200,
+      "totalcontributions": 10000
+    },
+    {
+      "id": "002",
+      "name": "Nickam Rutto",
+      "savingsbalance": 92850,
+      "loanbalance": -9800,
+      "contributions": 2040,
+      "totalcontributions": 10000
+    }
+  ]
+}

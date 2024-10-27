@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <title>Chama Management System</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Chama Management System</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#savings">Savings Account</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#loans">Loan account</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#track">Track my contributions</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="card p-2 m-4 shadow">
+      <div class="row">
+        <section id="register" class="col-md-6">
+          <div class="card p-3 mb-4 shadow">
+          <h4>Register New User</h4>
+              <form id="registrationForm">
+                  <label>Enter the member's name</label>
+                  <input type="text" id="newUserName" placeholder="Enter Name" class="mt-2 form-control form-control-sm custom-input" required>
+                  <label>Account No</label>
+                  <input type="text" id="accountNumber" placeholder="Account Number eg 003,004" class="mt-2 form-control form-control-sm " required>
+                  <label>Initial savings</label>
+                  <input type="number" id="initialSavings" placeholder="Initial Savings" class="mt-2 custom-input form-control form-control-sm " required>
+                  <div class="d-flex gap-3 mt-2">
+                      <button type="submit" class="btn btn-primary" id="registerUser">Register User</button>
+                  </div>
+              </form>
+          </div>
+      </section>
+        <section id="View" class="col-md-6">
+            <div class="card p-4 mb-4 shadow">
+              <h4>View accounts</h4>
+              <form id="searchForm">
+                <p>Enter the member's account number to view his account</p>
+                <small>E.g 001</small>
+                <input type="number" id="search" placeholder="Enter the account number" class="mt-2 custom-input" required>
+                <div class="d-flex gap-3 mt-3">
+                    <button class="btn btn-primary" id="searchButton" type="submit">Search for user</button>
+                </div>
+              </form>
+            </div>
+        </section>
+        </div>
+    </div>
+  
+  <div class="card p-2 m-4 shadow">
+    <h3 class="m-4 mt-0 mb-0">Account Management</h3>
+    <div class="row">
+        <section id="savings" class="col-md-4">
+            <div class="card p-4 mb-4 shadow">
+              <h3>Savings Account</h3>
+                <div class="card p-2">
+                    <strong>
+                        <p class="name">Name</p>
+                        <p id="savingsBalance" class="font-weight-bold"><strong>Savings Balance</strong></p>
+                    </strong>
+                </div>
+                <input type="number" class="mt-4" id="savingsData" min="1" title="Invalid entry" placeholder="Enter an amount"/>
+                <div class="d-flex gap-3 mt-3">
+                    <button class="btn btn-primary flex-grow-1" id="deposit">Deposit</button>
+                    <button class="btn btn-danger flex-grow-1" id="withdraw">Withdraw</button>
+                </div>
+            </div>
+        </section>
+        
+        <section id="loans" class="col-md-4">
+            <div class="card p-4 mb-4 shadow">
+              <h3>Loan Account</h3>
+                <div class="card p-2">
+                    <strong>
+                        <p class="name">Name</p>
+                        <p id="loanBalance">Loan Balance</p>
+                    </strong>
+                </div>
+                <input type="number" id="loanData" placeholder="Enter an amount" class="mt-4">
+                <div class="d-flex gap-3 mt-3">
+                    <button class="btn btn-primary flex-grow-1" id="apply">Apply for a loan</button>
+                    <button class="btn btn-danger flex-grow-1" id="pay">Pay loan</button>
+                </div>
+            </div>
+        </section>
+        
+        <section id="track" class="col-md-4">
+            <div class="card p-4 mb-4 shadow">
+              <h3>Monthly contributions</h3>
+                <div class="card p-2">
+                    <p>Monthly Contributions</p>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-label="Monthly contributions" style="width: 5%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <p id="contributions" class="mt-2">Total contribution</p>
+                </div>
+                <form id="contributionForm">
+                  <input type="number" id="contributionData" placeholder="Enter an amount" class=" custom-input" required>
+                    <div class="d-flex gap-3 mt-1">
+                        <button class="btn btn-primary" id="ContributionButton" type="submit">Pay contributions</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+      </div>
+    </div>
+  </div>
+<script src="main.js"></script> 
+</body>
+</html>
